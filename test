@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+mkdir -p data
+# write 2000 blocks of 1M
+dd if=/dev/zero of=data/out.txt bs=1M count=2000 conv=fdatasync
+echo done
