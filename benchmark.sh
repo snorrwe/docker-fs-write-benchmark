@@ -1,6 +1,4 @@
-#!/usr/bin/env nix-shell
-#! nix-shell -i bash
-#! nix-shell -p bash hyperfine
+#!/usr/bin/env bash
 set -euxo pipefail
 
 CMD="docker run"
