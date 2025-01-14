@@ -8,5 +8,4 @@ IMG="localhost/test"
 
 docker build . -t $IMG
 
-mkdir -p data
 hyperfine -s "rm -rf data; mkdir data" -w 5 -n no-volume "$CMD $IMG" -n volume "$CMD -v ./data:/test/data $IMG"
